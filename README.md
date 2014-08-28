@@ -1,1 +1,1 @@
-A HipChat integration that Googles various things for you, for fun and profit.
+Gopher is a HipChat integration that fetches and displays various types of internet content on-demand.
