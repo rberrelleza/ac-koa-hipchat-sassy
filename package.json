@@ -1,0 +1,36 @@
+{
+  "name": "ac-koa-hipchat-gopher",
+  "displayName": "Gopher",
+  "description": "Gopher fetches and displays various types of internet content on-demand.",
+  "version": "1.0.0",
+  "author": {
+    "name": "HipChat",
+    "url": "http://www.hipchat.com"
+  },
+  "license": "Apache 2.0",
+  "engines": {
+    "node": "~0.11.13"
+  },
+  "scripts": {
+    "web": "node --harmony web.js",
+    "web-dev": "nodemon --harmony -e js,css,hbs,html web.js",
+    "tunnel": "ngrok 3040"
+  },
+  "development": {
+    "port": 3040
+  },
+  "production": {
+    "localBaseUrl": "https://ac-koa-hipchat-gopher.herokuapp.com",
+    "mongoEnv": "MONGOHQ_URL",
+    "port": "$PORT"
+  },
+  "dependencies": {
+    "ac-koa": "^0.2.3",
+    "ac-koa-hipchat": "^0.2.4",
+    "co": "^3.1.0",
+    "co-request": "^0.2.0",
+    "googleapis": "^1.0.11",
+    "lodash": "^2.4.1",
+    "rsvp": "~3.0.13"
+  }
+}
