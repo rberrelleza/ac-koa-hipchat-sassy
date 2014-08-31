@@ -13,4 +13,9 @@ gopher.commands.forEach(function (command) {
   addon.webhook('room_message', command.pattern, command.run);
 });
 
+// addon.onWebhook('install', gopher.onInstall);
+addon.onWebhook('install', function *() {
+  yield gopher.onInstall;
+});
+
 app.listen();
