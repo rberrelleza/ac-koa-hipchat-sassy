@@ -1,4 +1,3 @@
-- /meme impl
 - /topic impl (/person, /place, /... ?)
 - improve /map
   - simple routing between two places with '->' delimiter
