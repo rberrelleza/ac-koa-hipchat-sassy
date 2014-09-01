@@ -1,4 +1,3 @@
-- /topic impl (/person, /place, /... ?)
 - improve /map
   - simple routing between two places with '->' delimiter
 - add /distance (geographical, with travel times)
