@@ -7,15 +7,10 @@ var gopher = require('./lib');
 var addon = app.addon()
   .hipchat()
   .allowRoom(true)
-  .scopes('send_notification');
+  .scopes('send_notification', 'view_group');
 
-gopher.commands.forEach(function (command) {
-  addon.webhook('room_message', command.pattern, command.run);
-});
+addon.webhook('room_message', gopher.pattern, gopher.onCommand);
 
-// addon.onWebhook('install', gopher.onInstall);
-addon.onWebhook('install', function *() {
-  yield gopher.onInstall;
-});
+addon.onWebhook('install', gopher.onInstall);
 
 app.listen();
