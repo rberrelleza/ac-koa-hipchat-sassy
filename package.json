@@ -1,7 +1,7 @@
 {
-  "name": "ac-koa-hipchat-gopher",
-  "displayName": "Gopher",
-  "description": "Gopher fetches and displays various types of internet content on-demand.",
+  "name": "ac-koa-hipchat-sassy",
+  "displayName": "Sassy",
+  "description": "Sassy provides commands to search the internet on request.",
   "version": "1.0.0",
   "author": {
     "name": "HipChat",
@@ -14,13 +14,13 @@
   "scripts": {
     "web": "node --harmony web.js",
     "web-dev": "nodemon --harmony -e js,css,hbs,html web.js",
-    "tunnel": "ngrok 3040"
+    "tunnel": "ngrok 3020"
   },
   "development": {
-    "port": 3040
+    "port": 3020
   },
   "production": {
-    "localBaseUrl": "https://ac-koa-hipchat-gopher.herokuapp.com",
+    "localBaseUrl": "https://ac-koa-hipchat-sassy.herokuapp.com",
     "mongoEnv": "MONGOHQ_URL",
     "port": "$PORT"
   },
@@ -30,6 +30,7 @@
     "co": "^3.1.0",
     "co-request": "^0.2.0",
     "lodash": "^2.4.1",
+    "nodetime": "^0.8.15",
     "rsvp": "~3.0.13"
   }
 }

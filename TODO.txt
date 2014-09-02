@@ -1,16 +1,7 @@
-- improve /map
-  - simple routing between two places with '->' delimiter
-- add /distance (geographical, with travel times)
+- /map - simple routing between two places with ' -> ' or ' to ' delimiter
 - add /movie
-- add /weather
+- add /metacritic
 - add r/*? (reddit, from chatty)
-- add input to /gopher to accept nl queries (wit.ai, rename addon to sassy?)
-- improve command help
-  - only output shortest cmd alias in main help
-  - give examples of ! at cmd level
-  - remove ! examples from main level
-  - give commands alias lists printed as it's own line of help
-    - then give all examples just using shortest alias
-- remove env?
+- add input to /sassy to accept nl queries (wit.ai)
+- give help examples of ! at cmd level
 - config ui to toggle commands
-  - chatty-like dynamic webhooks instead of statics?
