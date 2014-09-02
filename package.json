@@ -1,7 +1,7 @@
 {
   "name": "ac-koa-hipchat-sassy",
   "displayName": "Sassy",
-  "description": "Sassy provides commands to search the internet on request.",
+  "description": "Sassy adds commands to search the internet for certain types of content.",
   "version": "1.0.0",
   "author": {
     "name": "HipChat",

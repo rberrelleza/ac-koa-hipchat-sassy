@@ -1,1 +1,1 @@
-Sassy provides commands to search the internet on request.
+Sassy adds commands to search the internet for certain types of content.
