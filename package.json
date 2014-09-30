@@ -25,12 +25,12 @@
     "port": "$PORT"
   },
   "dependencies": {
-    "ac-koa": "^0.2.3",
-    "ac-koa-hipchat": "^0.2.8",
+    "ac-koa": "^0.2.6",
+    "ac-koa-hipchat": "^0.2.12",
+    "ac-koa-hipchat-keenio": "^0.1.5",
     "co": "^3.1.0",
     "co-request": "^0.2.0",
     "lodash": "^2.4.1",
-    "nodetime": "^0.8.15",
-    "rsvp": "~3.0.13"
+    "rsvp": "^3.0.14"
   }
 }
