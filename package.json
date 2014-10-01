@@ -26,7 +26,7 @@
   },
   "dependencies": {
     "ac-koa": "^0.2.6",
-    "ac-koa-hipchat": "^0.2.12",
+    "ac-koa-hipchat": "^0.2.13",
     "ac-koa-hipchat-keenio": "^0.1.5",
     "co": "^3.1.0",
     "co-request": "^0.2.0",
