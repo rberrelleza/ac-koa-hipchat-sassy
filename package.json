@@ -4,8 +4,8 @@
   "description": "Sassy adds commands to search the internet for certain types of content.",
   "version": "1.0.0",
   "author": {
-    "name": "HipChat",
-    "url": "http://www.hipchat.com"
+    "name": "Atlassian Labs",
+    "url": "http://www.atlassian.com"
   },
   "license": "Apache 2.0",
   "engines": {
@@ -20,7 +20,7 @@
     "port": 3020
   },
   "production": {
-    "localBaseUrl": "https://ac-koa-hipchat-sassy.herokuapp.com",
+    "localBaseUrl": "https://sassy.hipch.at",
     "mongoEnv": "MONGOHQ_URL",
     "port": "$PORT"
   },
