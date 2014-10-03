@@ -1,6 +1,7 @@
-Sassy adds commands to search the internet for certain types of content.
+# Sassy #
+Adds commands to search the internet for certain types of content.
 
-[Install Me](https://hipchat.com/addons/install?url=https%3A%2F%2Fac-koa-hipchat-sassy.herokuapp.com%2Faddon%2Fcapabilities)
+## [Install Me](https://hipchat.com/addons/install?url=https%3A%2F%2Fac-koa-hipchat-sassy.herokuapp.com%2Faddon%2Fcapabilities) ##
 
 # Commands #
 
@@ -35,31 +36,35 @@ Generates a map from a search phrase:
 
 ### /meme, /memegen, /mgen ###
 Creates a meme with one of the following patterns:
-*     /meme y u no {text}
-*     /meme aliens guy {text}
-*     /meme brace yourself {text}
-*     /meme {text} all the {things}
-*     /meme I don't always {something} but when I do {text}
-*     /meme {text} too damn {something}
-*     /meme not sure if {something} or {something else}
-*     /meme yo dawg {text} so {text}
-*     /meme all your {text} are belong to {text}
-*     /meme one does not simply {text}
-*     /meme if you {text} gonna have a bad time
-*     /meme if {text}, {word that can start a question} {text}?
-*     /meme {word that can start a question} the {expletive} {text}
-*     /meme success when {text} then {text}
-*     /meme cry when {text} then {text}
-*     /meme bad luck when {text} then {text}
-*     /meme scumbag {text} then {text}
-*     /meme what if I told you {text}
-*     /meme I hate {text}
-*     /meme why can't {personal pronoun} {text}
-*     /meme {text} so I got that going for me
-*     /meme {things}, how do they work?
-*     /meme {text}{3 x a|e|i|o|u}{text}
-*     /meme {image url or search} | {top text} | {bottom text}
-* 
+    
+```
+#!html
+     /meme y u no {text}
+     /meme aliens guy {text}
+     /meme brace yourself {text}
+     /meme {text} all the {things}
+     /meme I don't always {something} but when I do {text}
+     /meme {text} too damn {something}
+     /meme not sure if {something} or {something else}
+     /meme yo dawg {text} so {text}
+     /meme all your {text} are belong to {text}
+     /meme one does not simply {text}
+     /meme if you {text} gonna have a bad time
+     /meme if {text}, {word that can start a question} {text}?
+     /meme {word that can start a question} the {expletive} {text}
+     /meme success when {text} then {text}
+     /meme cry when {text} then {text}
+     /meme bad luck when {text} then {text}
+     /meme scumbag {text} then {text}
+     /meme what if I told you {text}
+     /meme I hate {text}
+     /meme why can't {personal pronoun} {text}
+     /meme {text} so I got that going for me
+     /meme {things}, how do they work?
+     /meme {text}{3 x a|e|i|o|u}{text}
+     /meme {image url or search} | {top text} | {bottom text}
+```
+
 ### /video, /youtube ###
 Searches for a video:
     /video {search phrase}
