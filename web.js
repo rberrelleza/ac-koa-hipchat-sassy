@@ -12,9 +12,11 @@ var addon = app.addon()
   .allowRoom(true)
   .scopes('send_notification', 'view_group');
 
-track(addon);
+var tracker = track(addon);
 
-addon.webhook('room_message', sassy.pattern, sassy.onCommand);
+addon.webhook('room_message', sassy.pattern, function *() {
+  yield sassy.onCommand(tracker);
+});
 
 addon.onWebhook('install', sassy.onInstall);
 
