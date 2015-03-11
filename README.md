@@ -72,3 +72,39 @@ Searches for a video:
 ### /weather ###
 Displays current weather or a forecast for the given location:
     /weather {location}
+
+
+# Run Sassy yourself with Docker #
+This is an experimental way for you to run Sassy yourself using Docker (i.e. "Behind the Firewall" with HipChat Server)
+
+### Prerequisites ###
+1. get your API key from api.giphy.com
+2. get your API key from developer.forecast.io
+3. git clone https://bitbucket.org/atlassianlabs/ac-koa-hipchat-sassy.git
+
+### Build ###
+1. cd ac-koa-hipchat-sassy 
+2. sudo docker build -t atlassian_labs/sassy:latest .
+
+### Run ###
+1. sudo docker run --name sassy-mongo --detach mongo:2.6
+2. sudo docker logs sassy-mongo
+3. sudo docker run --name sassy --detach --link sassy-mongo:mongo --publish 3020:3020 -e NODE_ENV="production" -e LOCAL_BASE_URL="
+http://your-docker-host-fqdn:3020" -e PORT=3020 -e GIPHY_API_KEY="yourapikeyhere" -e FORECAST_API_KEY="yourapikeyhere" atlassian_labs/
+sassy:latest
+4. sudo docker logs sassy
+5. Verify you see a valid capabilities.json returned from http://your-docker-host-fqdn:3020/addon/capabilities
+
+### Install ###
+1. Integrate your Docker-Sassy with your HipChat account with https://hipchat.example.com/admin/addons (or www.hipchat.com) -> Manage (tab) -> Install an integration from a descriptor URL: http://your-docker-host-fqdn:3020/addon/capabilities
+
+### Play ###
+1. Go to a chat room and type /sassy
+
+### Things to remember ###
+1. Use a firewall/iptables at the Docker host level to set ACLs and filter traffic
+2. Use your own SSL termination and port forwarding from the Docker host to protect your Sassy traffic
+3. You may have noticed the Docker container publishes through the host port 3020 so check for port conflicts
+4. If installing to HipChat Server your HC Server should have a valid trusted SSL cert from a major CA vendor, self signed is not supported (yet)
+5. To debug you can override the entry point by using docker run --interactive --tty ... and appending /bin/bash
+6. You are linking your Sassy App to a persistent MongoDB Container which will contain your installation/registration, if you destroy your MongoDB container (sadpanda) you will have to uninstall and reinstall Sassy again in your HipChat account
