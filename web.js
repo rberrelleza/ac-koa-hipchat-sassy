@@ -2,9 +2,8 @@ var track = require('ac-koa-hipchat-keenio').track;
 
 var ack = require('ac-koa').require('hipchat');
 var pkg = require('./package.json');
-var store = require('ac-node').MemoryStore;
 
-var services = {store: 'MemoryStore'};
+var services = {store: 'MongoStore'};
 var app = ack(pkg, services);
 var sassy = require('./lib');
 
