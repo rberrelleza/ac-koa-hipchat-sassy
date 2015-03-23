@@ -1,3 +1,4 @@
+var MongoStore = require('ac-node').MongoStore;
 var track = require('ac-koa-hipchat-keenio').track;
 
 var ack = require('ac-koa').require('hipchat');
@@ -13,11 +14,12 @@ var addon = app.addon()
   .scopes('send_notification', 'view_group');
 
 var tracker = track(addon);
+var addonStore = MongoStore(process.env[app.config.MONGO_ENV], 'sassy');
 
 addon.webhook('room_message', sassy.pattern, function *() {
-  yield sassy.onCommand(tracker);
+  this.tracker = tracker;
+  this.addonStore = addonStore;
+  yield sassy.onCommand;
 });
-
-addon.onWebhook('install', sassy.onInstall);
 
 app.listen();
