@@ -1,9 +1,11 @@
 var track = require('ac-koa-hipchat-keenio').track;
 
-var ack = require('ac-koa').require('hipchat');
+var atlassianConnectKoa = require('ac-koa').require('hipchat');
 var pkg = require('./package.json');
-var app = ack(pkg, {store: 'MongoStore'});
+var store = require('ac-node').MongoStore;
 
+var services = {store: 'MongoStore'};
+var app = atlassianConnectKoa(pkg, services);
 var sassy = require('./lib');
 
 var addon = app.addon()
