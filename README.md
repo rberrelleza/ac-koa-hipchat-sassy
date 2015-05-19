@@ -94,7 +94,7 @@ Creates a meme with one of the following patterns:
 /meme do you want {text} because that's how {text}
 ```
 
-### /video, /youtube ###
+### /video, /youtube, /yt ###
 Searches for a video:
 
 ```
@@ -116,7 +116,8 @@ This is an experimental way for you to run Sassy yourself using Docker (i.e. "Be
 ### Prerequisites ###
 1. get your API key from api.giphy.com
 2. get your API key from developer.forecast.io
-3. git clone https://bitbucket.org/atlassianlabs/ac-koa-hipchat-sassy.git
+3. get your API key from console.developers.google.com
+4. git clone https://bitbucket.org/atlassianlabs/ac-koa-hipchat-sassy.git
 
 ### Build ###
 1. cd ac-koa-hipchat-sassy 
@@ -125,9 +126,9 @@ This is an experimental way for you to run Sassy yourself using Docker (i.e. "Be
 ### Run ###
 1. sudo docker run --name sassy-mongo --detach mongo:2.6
 2. sudo docker logs sassy-mongo
-3. sudo docker run --name sassy --detach --link sassy-mongo:mongo --publish 3020:3020 -e NODE_ENV="production" -e LOCAL_BASE_URL="
-http://your-docker-host-fqdn:3020" -e PORT=3020 -e GIPHY_API_KEY="yourapikeyhere" -e FORECAST_API_KEY="yourapikeyhere" atlassian_labs/
-sassy:latest
+3. sudo docker run --name sassy --detach --link sassy-mongo:mongo --publish 3020:3020 -e NODE_ENV="production"
+   -e LOCAL_BASE_URL="http://your-docker-host-fqdn:3020" -e PORT=3020 -e GIPHY_API_KEY="yourapikeyhere"
+   -e FORECAST_API_KEY="yourapikeyhere" -e YOUTUBE_API_KEY="yourapikeyhere" atlassian_labs/sassy:latest
 4. sudo docker logs sassy
 5. Verify you see a valid capabilities.json returned from http://your-docker-host-fqdn:3020/addon/capabilities
 
