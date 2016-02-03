@@ -20,6 +20,11 @@
   "development": {
     "port": 3020
   },
+  "staging": {
+    "localBaseUrl": "https://ac-koa-hipchat-sassy-staging.herokuapp.com/",
+    "redisEnv": "REDISCLOUD_URL",
+    "port": "$PORT"
+  },
   "production": {
     "localBaseUrl": "https://sassy.hipch.at",
     "redisEnv": "REDISCLOUD_URL",
