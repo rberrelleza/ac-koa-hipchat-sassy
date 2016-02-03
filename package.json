@@ -22,7 +22,7 @@
   },
   "production": {
     "localBaseUrl": "https://sassy.hipch.at",
-    "mongoEnv": "MONGOHQ_URL",
+    "redisEnv": "REDISCLOUD_URL",
     "port": "$PORT"
   },
   "dependencies": {
