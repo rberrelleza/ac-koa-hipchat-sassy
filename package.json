@@ -30,9 +30,72 @@
     "redisEnv": "REDISCLOUD_URL",
     "port": "$PORT"
   },
+  "command": [
+    {
+      "name": "/animation",
+      "description": "Searches Google for an animated image",
+      "usage": "search phrase",
+      "aliases": [
+        "/anim"
+      ]
+    },
+    {
+      "name": "/giphy",
+      "description": "Searches Giphy for an animated image",
+      "usage": "search phrase",
+      "aliases": [
+        "/gif"
+      ]
+    },
+    {
+      "name": "/face",
+      "description": "Searches Google for an image of a face",
+      "usage": "search phrase"
+    },
+    {
+      "name": "/image",
+      "description": "Searches Google for an image",
+      "usage": "search phrase",
+      "aliases": [
+        "/img"
+      ]
+    },
+    {
+      "name": "/map",
+      "description": "Generates a map from a search phrase",
+      "usage": "some location"
+    },
+    {
+      "name": "/meme",
+      "description": "Creates a meme",
+      "usage": "search phrase | top text | bottom text",
+      "aliases": [
+        "/mgen"
+      ]
+    },
+    {
+      "name": "/sticker",
+      "description": "Searches Giphy for an animated sticker",
+      "usage": "search phrase"
+    },
+    {
+      "name": "/video",
+      "description": "Searches for a video",
+      "usage": "search phrase",
+      "aliases": [
+        "/youtube",
+        "/yt"
+      ]
+    },
+    {
+      "name": "/weather",
+      "description": "Displays current weather for the given location",
+      "usage": "some location"
+    }
+  ],
   "dependencies": {
     "ac-koa": "^0.2.6",
-    "ac-koa-hipchat": "^0.2.19",
+    "ac-koa-hipchat": "^0.2.20",
     "ac-koa-hipchat-keenio": "^0.2.0",
     "ac-node": "^0.2.3",
     "co": "^3.1.0",
