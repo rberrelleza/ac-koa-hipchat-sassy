@@ -19,7 +19,11 @@ var addonStore = RedisStore(process.env['REDISCLOUD_URL'], 'sassy');
 addon.webhook('room_message', commander.pattern, function *() {
   this.tracker = tracker;
   this.addonStore = addonStore;
-  yield commander.onCommand;
+  try {
+    yield commander.onCommand;
+  } catch (e) {
+    console.error(e);
+  }
 });
 
 app.listen();
